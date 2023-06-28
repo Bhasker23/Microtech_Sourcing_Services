@@ -10,12 +10,12 @@ public class Alphabate_Pattern {
 	public static void main(String[] args) {
 		
 		Map<Integer,Character> map = new LinkedHashMap<>();
-		map.put(1, 'A');
+		map.put(1,'A');
 		map.put(2,'B');
 		map.put(3,'C');
-		map.put(4, 'D');
-		map.put(5, 'E');
-		map.put(6, 'F');
+		map.put(4,'D');
+		map.put(5,'E');
+		map.put(6,'F');
 		map.put(7,'G');
 		map.put(8,'H');
 		map.put(9,'I');
@@ -33,9 +33,9 @@ public class Alphabate_Pattern {
 		map.put(21,'U');
 		map.put(22,'V');
 		map.put(23,'W');
-		map.put(24, 'X');
-		map.put(25, 'Y');
-		map.put(26, 'Z');
+		map.put(24,'X');
+		map.put(25,'Y');
+		map.put(26,'Z');
 	
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a number in the range 1-26");
@@ -58,14 +58,6 @@ public class Alphabate_Pattern {
 				   num++;
 			   }
 			   System.out.println();
-		}
-		
-		
-		
-		
-		
+		}	
 	}
-	
-	
-
 }
