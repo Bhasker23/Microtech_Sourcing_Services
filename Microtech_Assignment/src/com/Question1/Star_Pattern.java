@@ -23,15 +23,12 @@ public class Star_Pattern {
 	            createDownPattern(maxStars);
 	        }else if (direction.equalsIgnoreCase("Left")) {
 	            createleftPattern(maxStars);
-	        }
-//	            else if (direction.equalsIgnoreCase("Right")) {
-//	            createRightPattern(maxStars);
-//	        }
-	        else {
+	        }else if (direction.equalsIgnoreCase("right")) {
+	            createRightPattern(maxStars);
+	        }else {
 	            System.out.println("Invalid direction input!");
 	        }
 	    }
-
 
 		private static void createUpPattern(int maxStars) {
 			int space = 1;
@@ -146,8 +143,57 @@ public class Star_Pattern {
 				space = space+2;
 				System.out.println(" ");
 				
-			} 
-		} 		
+			}
+			if(maxStars%2 == 0) {
+				
+				for (int i = 0; i <=row+1; i++) {
+					System.out.print(" ");
+				}
+				System.out.print("*");
+			}
+		} 
+		
+		
+		private static void createRightPattern(int maxStars) {
+
+			int row = (int)Math.ceil(maxStars/2)+1;
+			for(int i = 1; i<=row; i++) {
+				
+				if(i == row) {for(int j = 1; j>0; j--) {System.out.print("* "+"* ");}}
+				
+				if(i != row) {for(int j = 1; j<=4; j++) {System.out.print(" ");}}
+				
+				int k = 1;
+				while(k <= i) {
+					System.out.print("*"+" ");
+					k++;
+				}
+				if(i != (maxStars/2)+1) {System.out.println();}else {break;}	
+			}
+			
+			System.out.println();	
+			int temp = maxStars - row;
+			int space = 2;
+			for(int i = 1; i<=temp; i++) {
+				for(int j = 1; j<=4; j++) {System.out.print(" ");}
+				int k = 1;
+				while(k <= row-i) {
+					System.out.print("* ");
+					k++;
+				}
+				space = space+2;
+				System.out.println(" ");
+				
+			}
+			
+			if (maxStars%2 == 0) {
+				for(int j = 1; j<=4; j++) {System.out.print(" ");}
+				System.out.println("* ");
+				
+			}
+
+		
+		}
 }		
 
 
